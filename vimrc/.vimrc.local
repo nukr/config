@@ -1,14 +1,12 @@
 imap jj <ESC>
 imap ,, ->
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'digitaltoad/vim-jade'
-Bundle "mattn/emmet-vim"
+
+let g:gist_clip_command='pbcopy'
+let g:gist_detect_filetype = 1
 
 nnoremap <leader>ff :FufFile <CR>
 nnoremap <leader>fb :FufBuffer <CR>
 nnoremap <leader>fr :FufRenewCache <CR>
-
 
 " 80 columns line
 if exists('+colorcolumn')

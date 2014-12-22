@@ -14,6 +14,8 @@ alias vim='/usr/local/bin/vim'
 alias vi=vim
 alias vimdiff='/usr/local/bin/vimdiff'
 alias tmux="TERM=screen-256color-bce tmux"
+alias node='node --harmony'
+alias python='python3.4'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -57,6 +59,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export PATH="/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims"
 export MANPATH="/usr/local/man:$MANPATH"
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -74,3 +77,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR=~/.nvm
 export EDITOR=vim
+source /Users/nukr/.iterm2_shell_integration.zsh
+
+# Let tmux can fixed title
+DISABLE_AUTO_TITLE=true
