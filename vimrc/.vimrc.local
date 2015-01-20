@@ -3,10 +3,20 @@ imap ,, ->
 
 let g:gist_clip_command='pbcopy'
 let g:gist_detect_filetype = 1
+set shiftwidth=2                " Use indents of 4 spaces
+set tabstop=2                   " An indentation every four columns
+set softtabstop=2               " Let backspace delete indent
 
-nnoremap <leader>ff :FufFile <CR>
-nnoremap <leader>fb :FufBuffer <CR>
-nnoremap <leader>fr :FufRenewCache <CR>
+"nnoremap <leader>ff :FufFile <CR>
+"nnoremap <leader>fb :FufBuffer <CR>
+
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>nnoremap <leader>fr :FufRenewCache <CR>
 
 " 80 columns line
 if exists('+colorcolumn')

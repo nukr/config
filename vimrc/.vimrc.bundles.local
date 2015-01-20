@@ -1,0 +1,3 @@
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'maksimr/vim-jsbeautify'
