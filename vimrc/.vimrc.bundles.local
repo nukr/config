@@ -1,6 +1,5 @@
 " vim-react-snippets:
 Bundle "justinj/vim-react-snippets"
-
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'digitaltoad/vim-jade'
