@@ -1,0 +1,11 @@
+" vim-react-snippets:
+Bundle "justinj/vim-react-snippets"
+
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'digitaltoad/vim-jade'
+Bundle "mattn/emmet-vim"
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'DrawIt'
