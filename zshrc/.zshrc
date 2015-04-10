@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="nukr"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -14,8 +14,6 @@ alias vim='/usr/local/bin/vim'
 alias vi=vim
 alias vimdiff='/usr/local/bin/vimdiff'
 alias tmux="TERM=screen-256color-bce tmux"
-alias node='node --harmony'
-alias python='python3.4'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -43,7 +41,7 @@ alias python='python3.4'
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -56,8 +54,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# Java
+export JAVA_7_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JAVA_7_HOME
+alias jdk7="export JAVA_HOME=$JAVA_7_HOME"
+alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 
-# export PATH="/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/lowei/.nvm/v0.10.23/bin:/Users/lowei/.rbenv/shims"
 export MANPATH="/usr/local/man:$MANPATH"
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 
@@ -74,10 +77,13 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR=~/.nvm
 export EDITOR=vim
-source /Users/nukr/.iterm2_shell_integration.zsh
 
 # Let tmux can fixed title
 DISABLE_AUTO_TITLE=true
+
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+export PATH=/Users/weilo/android-sdk-macosx/platform-tools:/Users/weilo/android-sdk-macosx/tools:$PATH
+export NVM_DIR="/Users/weilo/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
