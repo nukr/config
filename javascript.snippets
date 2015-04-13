@@ -1,27 +1,27 @@
 snippet cs
 	var cx = React.addons.classSet;
 snippet cdm
-	componentDidMount() {
+	componentDidMount () {
 		${1}
 	}
 snippet cdup
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate (prevProps, prevState) {
 		${1}
 	}
 snippet cwm
-	componentWillMount() {
+	componentWillMount () {
 		${1}
 	}
 snippet cwr
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps (nextProps) {
 		${1}
 	}
 snippet cwun
-	componentWillUnmount() {
+	componentWillUnmount () {
 		${1}
 	},
 snippet cwu
-	componentWillUpdate(nextProps, nextState) {
+	componentWillUpdate (nextProps, nextState) {
 		${1}
 	}
 snippet cx
@@ -49,9 +49,17 @@ snippet jsx
 	 * @jsx React.DOM
 	 */
 snippet pt
-	propTypes: {
-		${1}: React.PropTypes.${2:string}
-	},
+	static get propTypes () {
+    return {
+      ${1}: React.PropTypes.${2:string}
+    };
+	}
+snippet ct
+	static get contextTypes () {
+    return {
+      router: React.PropTypes.func.isRequired
+    };
+	}
 snippet rcc
 	/**
 	 * @jsx React.DOM
@@ -71,10 +79,10 @@ snippet rcc
 
 	module.exports = $1;
 snippet rc
-  import React from "react";
+  import React, {Component} from 'react';
 
-  class ${1:ClassName} extends React.Component {
-    render() {
+  class ${1:ClassName} extends Component {
+    render () {
       return (
         ${0:<div></div>}
       );
@@ -83,7 +91,7 @@ snippet rc
 
   export default $1;
 snippet ren
-	render() {
+	render () {
 		return (
 			${1:<div />}
 		);
@@ -93,7 +101,7 @@ snippet sst
 		${1}: ${2}
 	});
 snippet scu
-	shouldComponentUpdate(nextProps, nextState) {
+	shouldComponentUpdate (nextProps, nextState) {
 		${1}
 	}
 snippet props
