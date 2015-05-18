@@ -1,6 +1,10 @@
 imap jj <ESC>
 imap ,, =>
 
+nmap <Leader>m :wa<CR>:make<CR><CR><CR>:cw<CR> "儲存所有檔案並且編譯透過make後打開quickfix查看有無錯誤
+map <S-H> :bp <CR>
+map <S-L> :bn <CR>
+
 let g:gist_clip_command='pbcopy'
 let g:gist_detect_filetype = 1
 let g:airline_powerline_fonts=1
@@ -14,6 +18,7 @@ let g:jsx_ext_required = 0
 set shiftwidth=2                " Use indents of 2 spaces
 set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
+set regexpengine=1 "好像可以幹嘛 regexp 之類的
 
 "nnoremap <leader>ff :FufFile <CR>
 "nnoremap <leader>fb :FufBuffer <CR>
